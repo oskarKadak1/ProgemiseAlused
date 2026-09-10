@@ -11,7 +11,7 @@
             //toimub kontroll, kas sisestatud väärtus on number
             //kasutada if ja else lauseid
 
-            string input Console.ReadLine();
+            string input = Console.ReadLine();
             if (int.TryParse(input, out int number))
             {
                 Console.WriteLine($"Sisestatud number on: {number}");
