@@ -8,21 +8,24 @@
             //tuleb teha switch, kus esimene case on 10,
             //teine on 20 ja kolmas on 30
 
-            string number = Console.ReadLine();
-
-            switch (number)
+            int input = int.Parse(Console.ReadLine());
+            
+            switch (input)
             {
-                case "10":
+                case 10:
                     Console.WriteLine("valisite 10");
                     break;
-                case "20":
+
+                case 20:
                     Console.WriteLine("valisite 20");
                     break;
-                case "30":
+
+                case 30:
                     Console.WriteLine("valisite 30");
                     break;
+
                 default:
-                    Console.WriteLine("Kahtlased numbrid");
+                    Console.WriteLine("mingid Kahtlased numbrid on: " + input);
                     break;
             }
         }
