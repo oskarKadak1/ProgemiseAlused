@@ -5,13 +5,14 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Sisesta kõrgus (vähemalt 3): ");
+            
 
             if (!int.TryParse(Console.ReadLine(), out int height) || height < 3)
             {
                 Console.WriteLine("Sisesta täisarv: ");
                 return;
             }
-
+            
             for (int row = 1; row <= height; row++)
             {
 
@@ -27,6 +28,9 @@
                         (row == height - 1 && location == 2 * row - 1) ||
                         (row == height && location == row);
 
+                    Console.ForegroundColor = thing
+                        ? ConsoleColor.Red : ConsoleColor.Green;
+
                     //ternary operaator: muutuja ? (kaks valikut peale seda)
                     // kui esimene valik on vale, siis vali tein e
                     //kui ei tule o-d, siis pane *
@@ -36,6 +40,8 @@
                 Console.WriteLine();
             }
 
+            //Puu tüvi
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             for (int row = 1; row <= 2; row++)
             {
                 for (int empty = 1; empty < height; empty++)
@@ -45,6 +51,8 @@
 
                 Console.WriteLine("*");
             }
+
+            Console.ResetColor();
         }
     }
 }
